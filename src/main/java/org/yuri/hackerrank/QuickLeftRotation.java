@@ -12,14 +12,16 @@ public class QuickLeftRotation {
 
         leftRotate(arr, n, k);
         System.out.println(Arrays.toString(arr));
+
+        test1();
     }
 
     static void leftRotate(int[] arr, int n, int k) {
         k = k % n; // Obter o ponto incial da matriz girada
 
         reverse(arr, 0, n-1); // Inverte o array completo
-        reverse(arr, n, k-1); // Inverte a primeira parte até o índice k-1
-        reverse(arr, 0, k-1); // Inverte a segunda parte do início até o índice k-1
+//        reverse(arr, n, k-1); // Inverte a primeira parte até o índice k-1
+//        reverse(arr, 0, k-1); // Inverte a segunda parte do início até o índice k-1
     }
 
     static void reverse(int[] arr, int left, int right) {
@@ -43,7 +45,7 @@ public class QuickLeftRotation {
             Inverte a segunda parte do início até o índice k-1 (k=2): [6, 7, 5, 4, 3, 2, 1]
          */
 
-        int k = 2;
+        int k = 0;
         leftRotate(arr, n, k);
         System.out.println(Arrays.toString(arr));
 
